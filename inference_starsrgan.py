@@ -1,7 +1,8 @@
-import argparse
+import os
 import cv2
 import glob
-import os
+import argparse
+
 
 from starsrgan.utils.enhancer import Enhancer
 from starsrgan.archs.generator_arch import RealSRNet, StarSRNet, LiteSRNet
