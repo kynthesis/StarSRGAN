@@ -7,7 +7,7 @@ import torch
 # import torch.nn as nn
 from scipy import special
 # from scipy.stats import multivariate_normal
-from torchvision.transforms.v2.functional import rgb_to_grayscale
+from torchvision.transforms.functional import rgb_to_grayscale
 
 # -------------------------------------------------------------------- #
 # --------------------------- blur kernels --------------------------- #
