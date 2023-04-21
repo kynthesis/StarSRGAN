@@ -1,0 +1,11 @@
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+export PYTHONPATH="$PWD"
+
+sudo apt install libglu1-mesa-dev nano unzip
+
+gdown https://drive.google.com/uc?id=1ahUElNiCPEdzsshnEGFpCSUYgjIpqN8b&export=download
+
+python scripts/generate_meta_info.py --input datasets/DIV2K/DIV2K_HR datasets/DIV2K/DIV2K_multiscale --root datasets/DIV2K datasets/DIV2K --meta_info datasets/DIV2K/meta_info.txt
