@@ -6,7 +6,7 @@ export PYTHONPATH="$PWD"
 
 sudo apt install libglu1-mesa-dev nano unzip
 
-gdown 
+gdown 1NdnC0RSPBHvWY3ZQbJBWth66pXy7-D9Q
 
 python scripts/generate_multiscale_DF2K.py --input datasets/DF2K/DF2K_HR --output datasets/DF2K/DF2K_multiscale
 
