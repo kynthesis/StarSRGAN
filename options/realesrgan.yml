@@ -31,15 +31,15 @@ gray_noise_prob2: 0.4
 jpeg_range2: [30, 95]
 
 gt_size: 256
-queue_size: 180
+queue_size: 160
 
 # dataset and data loader settings
 datasets:
   train:
-    name: Set14
+    name: DF2K
     type: RealESRGANDataset
-    dataroot_gt: datasets/Set14
-    meta_info: datasets/Set14/meta_info.txt
+    dataroot_gt: datasets/DF2K
+    meta_info: datasets/DF2K/meta_info/meta_info_DF2Kmultiscale.txt
     io_backend:
       type: disk
 
@@ -67,8 +67,8 @@ datasets:
 
     # data loader
     use_shuffle: true
-    num_worker_per_gpu: 5
-    batch_size_per_gpu: 12
+    num_worker_per_gpu: 4
+    batch_size_per_gpu: 8
     dataset_enlarge_ratio: 1
     prefetch_mode: ~
 
