@@ -1,5 +1,3 @@
-sudo apt install nvidia-driver-530
-
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
@@ -8,7 +6,7 @@ export PYTHONPATH="$PWD"
 
 sudo apt install libglu1-mesa-dev nano unzip
 
-gdown 1NdnC0RSPBHvWY3ZQbJBWth66pXy7-D9Q
+gdown DF2K
 
 python scripts/generate_multiscale_DF2K.py --input datasets/DF2K/DF2K_HR --output datasets/DF2K/DF2K_multiscale
 
