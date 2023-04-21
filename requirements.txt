@@ -3,6 +3,7 @@ mc.py
 numpy
 opencv-python
 scipy
+tensorboard
 torch
 torchvision
 tqdm
