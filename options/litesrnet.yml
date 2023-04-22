@@ -107,7 +107,7 @@ datasets:
     use_shuffle: true
     num_worker_per_gpu: 4
     batch_size_per_gpu: 2
-    dataset_enlarge_ratio: 16
+    dataset_enlarge_ratio: 2
     prefetch_mode: ~
 
   # Uncomment these for validation
@@ -169,7 +169,7 @@ train:
 # logging settings
 logger:
   print_freq: 100
-  save_checkpoint_freq: !!float 5e3
+  save_checkpoint_freq: !!float 50e3
   use_tb_logger: true
   wandb:
     project: ~
