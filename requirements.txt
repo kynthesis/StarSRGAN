@@ -2,6 +2,7 @@ lmdb
 mc.py
 numpy
 opencv-python
+packaging
 scipy
 tensorboard
 torch
