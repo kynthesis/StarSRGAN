@@ -1,6 +1,10 @@
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+conda create -n StarSRGAN python=3.11
+
+pip3 install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu118
+
+git clone https://github.com/kynthesis/StarSRGAN.git
 
 export PYTHONPATH="$PWD"
 
@@ -14,3 +18,5 @@ python scripts/generate_meta_info.py --input datasets/DF2K/DF2K_HR datasets/DF2K
 
 dataroot_gt: datasets/DF2K
 meta_info: datasets/DF2K/meta_info/meta_info_DF2Kmultiscale.txt
+
+python starsrgan/train.py -opt options/realesrnet.yml --auto_resume
