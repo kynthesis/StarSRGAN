@@ -16,7 +16,7 @@ from starsrgan.utils.degradation import circular_lowpass_kernel, random_mixed_ke
 from starsrgan.utils.registry import DATASET_REGISTRY
 
 
-@DATASET_REGISTRY.register(suffix="basicsr")
+@DATASET_REGISTRY.register()
 class RealESRGANDataset(data.Dataset):
     """Dataset used for Real-ESRGAN model:
     Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data.
