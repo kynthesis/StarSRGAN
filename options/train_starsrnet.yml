@@ -1,5 +1,5 @@
 # general settings
-name: LiteSRNet_1000k
+name: train_StarSRNet_2M
 model_type: StarSRNetModel
 scale: 4
 num_gpu: auto  # auto: can infer from your visible devices automatically. official: 4 GPUs
@@ -49,7 +49,7 @@ gray_noise_prob2: 0.4
 jpeg_range2: [30, 95]
 
 gt_size: 256
-queue_size: 160
+queue_size: 320
 
 # dataset and data loader settings
 datasets:
@@ -57,7 +57,7 @@ datasets:
     name: DF2K
     type: StarSRGANDataset
     dataroot_gt: datasets/DF2K
-    meta_info: datasets/DF2K/meta_info/meta_info_DF2Kmultiscale.txt
+    meta_info: datasets/DF2K/meta_info.txt
     io_backend:
       type: disk
 
@@ -106,7 +106,7 @@ datasets:
     # data loader
     use_shuffle: true
     num_worker_per_gpu: 4
-    batch_size_per_gpu: 2
+    batch_size_per_gpu: 16
     dataset_enlarge_ratio: 1
     prefetch_mode: ~
 
@@ -121,7 +121,7 @@ datasets:
 
 # network structures
 network_g:
-  type: LiteSRNet
+  type: StarSRNet
   drop_out: false
 
 # path
@@ -142,10 +142,10 @@ train:
 
   scheduler:
     type: MultiStepLR
-    milestones: [1000000]
-    gamma: 0.5
+    milestones: [50000, 100000, 150000, 200000, 250000, 300000, 350000]
+    gamma: 1
 
-  total_iter: 1000000
+  total_iter: 2000000
   warmup_iter: -1  # no warm up
 
   # losses
