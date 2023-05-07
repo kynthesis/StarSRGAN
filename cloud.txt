@@ -21,4 +21,4 @@ python scripts/generate_meta_info.py --input datasets/DF2K/DF2K_HR datasets/DF2K
 dataroot_gt: datasets/DF2K
 meta_info: datasets/DF2K/meta_info/meta_info_DF2Kmultiscale.txt
 
-python starsrgan/train.py -opt options/realesrnet.yml --auto_resume
+python starsrgan/train.py -opt options/train_starsrnet.yml --auto_resume
