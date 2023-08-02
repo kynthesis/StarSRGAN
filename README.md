@@ -1,4 +1,16 @@
 # StarSRGAN: Improving Real-World Blind Super-Resolution
+Official PyTorch Implementation of [StarSRGAN: Improving Real-World Blind Super-Resolution](https://arxiv.org/abs/2307.16169)
+
+Accepted for Oral Presentation at the International Conference in Central Europe on 
+
+Computer Graphics, Visualization and Computer Vision 2023 (WSCG 2023).
+
+May 15-19, 2023, Prague/Pilsen, Czech Republic
+
+
+**Khoa D. Vo, Len T. Bui.**
+
+Faculty of Information Technology (FIT), University of Science, VNU.HCM, Ho Chi Minh City, Vietnam.
 
 # How to Train/Finetune StarSRGAN models
 
