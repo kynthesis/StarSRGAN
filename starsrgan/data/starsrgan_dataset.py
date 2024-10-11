@@ -98,8 +98,8 @@ class StarSRGANDataset(data.Dataset):
         self.kernel_range = [
             2 * v + 1
             for v in range(
-                math.ceil(self.blur_kernel_size_minimum / 2),
-                math.ceil(self.blur_kernel_size / 2),
+                math.floor(self.blur_kernel_size_minimum / 2),
+                math.floor(self.blur_kernel_size / 2) + 1,
             )
         ]
         self.pulse_tensor = torch.zeros(
@@ -110,8 +110,8 @@ class StarSRGANDataset(data.Dataset):
         self.kernel_range2 = [
             2 * v + 1
             for v in range(
-                math.ceil(self.blur_kernel_size2_minimum / 2),
-                math.ceil(self.blur_kernel_size2 / 2),
+                math.floor(self.blur_kernel_size2_minimum / 2),
+                math.floor(self.blur_kernel_size2 / 2) + 1,
             )
         ]
         self.pulse_tensor2 = torch.zeros(
